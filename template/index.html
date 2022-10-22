@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+    <title>Bloom Filter</title>
+    <style>
+        body {
+            background-color: #fcbfbb;
+        }
+
+        .form1 {
+            padding: 100px 200px 0px 200px;
+        }
+        .form2{
+            padding: 10px 200px 10px 200px;
+        }
+
+        .increase {
+            font-size: 3rem;
+        }
+        .form3{
+            margin-top : 30px;
+            width:40%;
+            margin-left:30%;
+            margin-right:30%;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <form class="form1" method="post">
+        {% csrf_token %}
+        <div class="text-center mb-4">
+            <h1 class="h3 mb-3 font-weight-normal increase">Username Detection using Bloom Filter</h1>
+            <p>An Algorithm to search in a Dataset in O(1) Complexity</p>
+        </div>
+
+        <div class="form2">
+            <div class="form-label-group">
+                <input type="text" name="username" class="form-control" placeholder="Enter Usermame" required autofocus>
+            </div>
+            <br>
+            <b>
+                <p class="text-center font-weight-bold display-6">{{data}}</p>
+            </b>
+            <button class="btn btn-lg btn-primary form3" type="submit">Submit</button>
+            <p class="mt-5 mb-3 text-muted text-center">&copy; 2022-2023</p>
+        </div>
+    </form>
+</body>
+
+</html>
